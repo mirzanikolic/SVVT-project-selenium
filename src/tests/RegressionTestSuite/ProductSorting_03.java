@@ -16,7 +16,7 @@ public class ProductSorting_03 {
 
   @Before
   public void setUp() {
-    System.setProperty("webdriver.chrome.driver", "C:/Users/Administrator/Desktop/chromedriver.exe");
+    System.setProperty("webdriver.chrome.driver", "/Users/mirzanikolic/Documents/chromedriver/chromedriver");
     driver = new ChromeDriver();
     shopPage = new ShopPage(driver);
   }

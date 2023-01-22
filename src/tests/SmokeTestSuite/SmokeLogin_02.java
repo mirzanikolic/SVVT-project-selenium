@@ -1,6 +1,7 @@
 package tests.SmokeTestSuite;
 import static org.junit.Assert.assertNotEquals;
 
+import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 import org.openqa.selenium.WebDriver;
@@ -22,6 +23,16 @@ public class SmokeLogin_02 {
     System.setProperty("webdriver.chrome.driver", "/Users/mirzanikolic/Documents/chromedriver/chromedriver");
     driver = new ChromeDriver();
     loginPage = new LoginPage(driver);
+  }
+
+  @After
+  public void clear() {
+    try {
+      Thread.sleep(2000);
+      driver.quit();
+    } catch (Exception exception) {
+      System.out.println(exception.getMessage());
+    }
   }
 
   @Test

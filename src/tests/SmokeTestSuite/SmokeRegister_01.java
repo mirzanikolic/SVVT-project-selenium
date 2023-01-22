@@ -1,5 +1,6 @@
 package tests.SmokeTestSuite;
 
+import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 import org.openqa.selenium.WebDriver;
@@ -21,6 +22,16 @@ public class SmokeRegister_01 {
     System.setProperty("webdriver.chrome.driver", "/Users/mirzanikolic/Documents/chromedriver/chromedriver");
     driver = new ChromeDriver();
     registerPage = new RegisterPage(driver);
+  }
+
+  @After
+  public void clear() {
+    try {
+      Thread.sleep(2000);
+      driver.quit();
+    } catch (Exception exception) {
+      System.out.println(exception.getMessage());
+    }
   }
 
   @Test

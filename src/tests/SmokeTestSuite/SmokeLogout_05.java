@@ -1,5 +1,6 @@
 package tests.SmokeTestSuite;
 
+import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 import org.openqa.selenium.WebDriver;
@@ -27,6 +28,16 @@ public class SmokeLogout_05 {
     loginPage = new LoginPage(driver);
   }
 
+  @After
+  public void clear() {
+    try {
+      Thread.sleep(2000);
+      driver.quit();
+    } catch (Exception exception) {
+      System.out.println(exception.getMessage());
+    }
+  }
+
   @Test
   public void Run() {
     driver.get("https://www.genelec.ba");
@@ -35,10 +46,11 @@ public class SmokeLogout_05 {
       driver.manage().window().maximize();
       homePage.clickOnHeaderLinksWrapper();
       loginPage.login();
-      Thread.sleep(2000);
+      Thread.sleep(5000);
       homePage.clickOnHeaderLinksWrapper();
       homePage.clickOnLogout();
-      assertEquals("https://www.genelec.ba", driver.getCurrentUrl());
+      Thread.sleep(2000);
+      assertEquals("https://genelec.ba/", driver.getCurrentUrl());
     } catch (Exception exception) {
       System.out.println(exception.getMessage());
     }

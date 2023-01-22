@@ -24,7 +24,7 @@ public class RemoveFromWishList_10 {
 
   @Before
   public void setUp() {
-    System.setProperty("webdriver.chrome.driver", "C:/Users/Administrator/Desktop/chromedriver.exe");
+    System.setProperty("webdriver.chrome.driver", "/Users/mirzanikolic/Documents/chromedriver/chromedriver");
     driver = new ChromeDriver();
     loginPage = new LoginPage(driver);
     cartPage = new CartPage(driver);

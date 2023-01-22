@@ -41,12 +41,13 @@ public class SmokeSearch_04 {
     try {
       Thread.sleep(6000);
       driver.manage().window().maximize();
+      Thread.sleep(1000);
       homePage.clickOnSearchBar();
       homePage.setSearchText("Iphone 13");
-      Thread.sleep(1000);
+      Thread.sleep(3000);
       homePage.clickOnSearchItem();
       homePage.clickOnCartButton();
-      Thread.sleep(1000);
+      Thread.sleep(3000);
       assertTrue(homePage.isItemAddedToCart());
     } catch (Exception exception) {
       System.out.println(exception.getMessage());
