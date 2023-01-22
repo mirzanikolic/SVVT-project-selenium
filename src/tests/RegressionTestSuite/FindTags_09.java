@@ -6,16 +6,18 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 
 import pages.HomePage;
-import pages.LoginPage;
+import pages.NewArticlesPage;
 import pages.ShopPage;
 
-public class MinMaxRangeFilter_09 {
+import static org.junit.Assert.assertEquals;
+
+public class FindTags_09 {
 
     WebDriver driver;
     HomePage homePage;
-    ShopPage shopPage;
+    NewArticlesPage newArticlesPage;
 
-    public MinMaxRangeFilter_09() {
+    public FindTags_09() {
 
     }
 
@@ -24,17 +26,20 @@ public class MinMaxRangeFilter_09 {
         System.setProperty("webdriver.chrome.driver", "/Users/mirzanikolic/Documents/chromedriver/chromedriver");
         driver = new ChromeDriver();
         homePage = new HomePage(driver);
-        shopPage = new ShopPage(driver);
+        newArticlesPage = new NewArticlesPage(driver);
     }
 
     @Test
     public void Run() {
-        driver.get("https://genelec.ba/mobitelic-576");
+        driver.get("https://genelec.ba/");
         try {
-            Thread.sleep(6000);
+            Thread.sleep(1000);
             driver.manage().window().maximize();
-            Thread.sleep(3000);
-            shopPage.inputMinPrice();
+            homePage.clickOnNewArticlesButton();
+            Thread.sleep(2000);
+            newArticlesPage.clickOnViewAll();
+            Thread.sleep(1000);
+            assertEquals("https://genelec.ba/producttag/all", driver.getCurrentUrl());
         } catch (Exception exception) {
             System.out.println(exception.getMessage());
         }

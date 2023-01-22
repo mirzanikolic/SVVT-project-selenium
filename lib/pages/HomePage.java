@@ -7,6 +7,9 @@ public class HomePage {
   private final WebDriver driver;
 
   private final By HeaderLinksWrapper = By.className("header-links-wrapper");
+//  private final By NewArticlesNav = By.xpath("/html/body/div[8]/div[1]/div[2]/div/div[2]/div/ul[1]/li[2]/a/span");
+    private final By NewArticlesNav = By.xpath("/html/body/div[8]/div[1]/div[2]/div/div[2]/div/ul[1]/li[2]/a/span");
+
   private final By LogoutNav = By.className("ico-logout");
   private final By WishListNav = By.className("ico-wishlist");
   private final By PhonesCategory = By.linkText("Mobilni telefoni");
@@ -28,6 +31,8 @@ public class HomePage {
   public void clickOnHeaderLinksWrapper() {
     driver.findElement(HeaderLinksWrapper).click();
   }
+
+  public void clickOnNewArticlesButton() { driver.findElement(NewArticlesNav).click(); }
 
   public void clickOnLogout() {
     driver.findElement(LogoutNav).click();

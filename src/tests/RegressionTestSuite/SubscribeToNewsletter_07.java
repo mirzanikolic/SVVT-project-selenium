@@ -31,7 +31,7 @@ public class SubscribeToNewsletter_07 {
     try {
       Thread.sleep(6000);
       driver.manage().window().maximize();
-      homePage.setNewsletterEmail("gossokutrasi-614yopmail.com");
+      homePage.setNewsletterEmail("random.email@stu.ibu.edu.ba");
       homePage.clickOnSubscribeButton();
       Thread.sleep(1000);
       assertTrue(homePage.isSubscriptionFailed());
