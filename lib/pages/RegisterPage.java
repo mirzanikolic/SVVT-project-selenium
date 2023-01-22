@@ -6,21 +6,21 @@ import org.openqa.selenium.WebDriver;
 public class RegisterPage {
   private WebDriver driver;
 
-  private By HeaderLinksWrapper = By.className("header-links-wrapper");
-  private By RegisterNav = By.className("ico-register");
-  private By GenderMale = By.id("gender-male");
-  private By FirstName = By.id("FirstName");
-  private By LastName = By.id("LastName");
-  private By Email = By.id("Email");
-  private By Company = By.id("Company");
-  private By StreetAddress = By.id("StreetAddress");
-  private By ZipPostalCode = By.id("ZipPostalCode");
-  private By City = By.id("City");
-  private By Phone = By.id("Phone");
-  private By Newsletter = By.id("Newsletter");
-  private By Password = By.id("Password");
-  private By ConfirmPassword = By.id("ConfirmPassword");
-  private By ConfirmButton = By.id("register-button");
+  private final By HeaderLinksWrapper = By.className("header-links-wrapper");
+  private final By RegisterNav = By.className("ico-register");
+  private final By GenderMale = By.id("gender-male");
+  private final By FirstName = By.id("FirstName");
+  private final By LastName = By.id("LastName");
+  private final By Email = By.id("Email");
+  private final By Company = By.id("Company");
+  private final By StreetAddress = By.id("StreetAddress");
+  private final By ZipPostalCode = By.id("ZipPostalCode");
+  private final By City = By.id("City");
+  private final By Phone = By.id("Phone");
+  private final By Newsletter = By.id("Newsletter");
+  private final By Password = By.id("Password");
+  private final By ConfirmPassword = By.id("ConfirmPassword");
+  private final By ConfirmButton = By.id("register-button");
 
   public RegisterPage(WebDriver _driver) {
     driver = _driver;

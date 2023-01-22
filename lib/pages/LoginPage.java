@@ -4,14 +4,14 @@ import org.openqa.selenium.WebDriver;
 
 public class LoginPage {
 
-  private WebDriver driver;
+  private final WebDriver driver;
 
-  private By HeaderLinksWrapper = By.className("header-links-wrapper");
-  private By LoginNav = By.className("ico-login");
-  private By EmailInput = By.id("Email");
-  private By PasswordInput = By.id("Password");
-  private By RememberMe = By.id("RememberMe");
-  private By LoginSubmit = By.className("login-button");
+  private final By HeaderLinksWrapper = By.className("header-links-wrapper");
+  private final By LoginNav = By.className("ico-login");
+  private final By EmailInput = By.id("Email");
+  private final By PasswordInput = By.id("Password");
+  private final By RememberMe = By.id("RememberMe");
+  private final By LoginSubmit = By.className("login-button");
 
   public LoginPage(WebDriver _driver) {
     driver = _driver;

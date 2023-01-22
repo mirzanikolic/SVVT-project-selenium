@@ -4,23 +4,22 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
 public class HomePage {
-  private WebDriver driver;
+  private final WebDriver driver;
 
-  private By HeaderLinksWrapper = By.className("header-links-wrapper");
-  private By LogoutNav = By.className("ico-logout");
-  private By WishListNav = By.className("ico-wishlist");
-  private By PhonesCategory = By.linkText("Mobilni telefoni");
-  private By Iphone11Card = By.linkText("Apple iPhone 11 64GB White");
-  private By SearchBar = By.id("small-searchterms");
-  private By SearchItem = By.className("instant-search-item");
-  private By MainCart = By.className("cart-trigger");
-  private By CartButton = By.className("add-to-cart-button");
-  private By CartContent = By.className("content");
-  private By NewsletterEmail = By.id("newsletter-email");
-  private By SubscribeButton = By.id("newsletter-subscribe-button");
-  private By SubscribeResultContent = By.id("newsletter-result-block");
-  private By SearchButton = By.className("search-box-button");
-  //By.xpath("//div[@data-productid='47872']//div[@class='details']//div[@class='add-info']//div[@class='buttons-lower']//div[@class='button-2']");
+  private final By HeaderLinksWrapper = By.className("header-links-wrapper");
+  private final By LogoutNav = By.className("ico-logout");
+  private final By WishListNav = By.className("ico-wishlist");
+  private final By PhonesCategory = By.linkText("Mobilni telefoni");
+  private final By Iphone11Card = By.linkText("Apple iPhone 11 64GB White");
+  private final By SearchBar = By.id("small-searchterms");
+  private final By SearchItem = By.className("instant-search-item");
+  private final By MainCart = By.className("cart-trigger");
+  private final By CartButton = By.className("add-to-cart-button");
+  private final By CartContent = By.className("content");
+  private final By NewsletterEmail = By.id("newsletter-email");
+  private final By SubscribeButton = By.id("newsletter-subscribe-button");
+  private final By SubscribeResultContent = By.id("newsletter-result-block");
+  private final By SearchButton = By.className("search-box-button");
 
   public HomePage(WebDriver _driver) {
     driver = _driver;

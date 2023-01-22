@@ -10,10 +10,9 @@ import org.w3c.dom.xpath.XPathResult;
 public class ShopPage {
   WebDriver driver;
 
-  private By SortInput = By.id("products-orderby");
-  private By ProductCartButton = By.className("product-box-add-to-cart-button");
-  private By NoResultMsg = By.className("no-result");
-  private By PriceSlider = By.id("slider");
+  private final By SortInput = By.id("products-orderby");
+  private final By ProductCartButton = By.className("product-box-add-to-cart-button");
+  private final By NoResultMsg = By.className("no-result");
 
   public ShopPage(WebDriver _driver) {
     driver = _driver;

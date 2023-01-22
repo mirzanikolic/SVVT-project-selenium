@@ -6,12 +6,12 @@ import org.openqa.selenium.WebElement;
 
 public class CartPage {
 
-  private WebDriver driver;
+  private final WebDriver driver;
 
-  private By QtyInput = By.className("qty-input");
-  private By UpdateButton = By.className("update-cart-button");
-  private By DeleteCheck = By.name("removefromcart");
-  private By NoData = By.className("no-data");
+  private final By QtyInput = By.className("qty-input");
+  private final By UpdateButton = By.className("update-cart-button");
+  private final By DeleteCheck = By.name("removefromcart");
+  private final By NoData = By.className("no-data");
 
   public CartPage(WebDriver _driver) {
     driver = _driver;

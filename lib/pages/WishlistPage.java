@@ -6,8 +6,8 @@ import org.openqa.selenium.WebDriver;
 public class WishlistPage {
   WebDriver driver;
 
-  private By UpdateWishListButton = By.className("update-wishlist-button");
-  private By NoData = By.className("no-data");
+  private final By UpdateWishListButton = By.className("update-wishlist-button");
+  private final By NoData = By.className("no-data");
 
   public WishlistPage(WebDriver _driver) {
     driver = _driver;
